@@ -1,0 +1,411 @@
+/* =========================
+   STAGE 1 - BASIC UI
+   My Daily To-Do
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    background: #4f46e5;
+    color: white;
+
+    padding: 8px 10px;
+
+    border-radius: 8px;
+
+    margin-right: 8px;
+}
+
+.date {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 40px auto;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #777;
+}
+
+
+/* =========================
+   PROGRESS CARD
+========================= */
+
+.progress-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.progress-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.progress-info h2 {
+    font-size: 20px;
+}
+
+.progress-info p {
+    color: #777;
+
+    margin-top: 5px;
+}
+
+.percentage {
+    font-size: 30px;
+    font-weight: bold;
+
+    color: #4f46e5;
+}
+
+
+/* Progress bar */
+
+.progress-bar {
+    width: 100%;
+
+    height: 10px;
+
+    background: #e9e9ef;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+
+    height: 100%;
+
+    background: #4f46e5;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+/* =========================
+   ADD TASK
+========================= */
+
+.add-task {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.add-task h2 {
+    margin-bottom: 20px;
+}
+
+.task-input {
+    display: flex;
+
+    gap: 10px;
+}
+
+.task-input input {
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+#taskInput {
+    flex: 1;
+}
+
+.task-input input:focus {
+    border-color: #4f46e5;
+}
+
+.task-input button {
+    background: #4f46e5;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.task-input button:hover {
+    background: #3730a3;
+}
+
+
+/* =========================
+   TASK SECTION
+========================= */
+
+.tasks-section {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-title span {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   STREAK
+========================= */
+
+.streak-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.streak-icon {
+    font-size: 35px;
+}
+
+.streak-card p {
+    color: #777;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .date {
+        display: none;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .welcome h1 {
+        font-size: 25px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input input,
+    .task-input button {
+        width: 100%;
+    }
+}
+/* =========================
+   STAGE 2 - TASK CARDS
+========================= */
+
+.task-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px;
+
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    transition: 0.2s;
+}
+
+.task-card:hover {
+    background: #f9f9ff;
+}
+
+
+/* Left side */
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* Checkbox */
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+}
+
+
+/* Task information */
+
+.task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.task-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.task-time {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Completed task */
+
+.task-card.completed .task-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-card.completed {
+    background: #f7f7f7;
+}
+
+
+/* Delete button */
+
+.delete-btn {
+    border: none;
+
+    background: transparent;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+.delete-btn:hover {
+    transform: scale(1.1);
+}

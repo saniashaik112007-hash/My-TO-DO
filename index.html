@@ -1,0 +1,164 @@
+<!-- =========================
+     STAGE 1 - BASIC UI
+     My Daily To-Do
+========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Daily To-Do</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <span>✓</span>
+            My Daily To-Do
+        </div>
+
+        <div class="date" id="currentDate">
+            Sunday, August 16, 2026
+        </div>
+
+    </header>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+
+            <div>
+                <h1>Good Afternoon 👋</h1>
+
+                <p>
+                    Let's make today productive!
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Progress Card -->
+        <section class="progress-card">
+
+            <div class="progress-info">
+
+                <div>
+                    <h2>Today's Progress</h2>
+
+                    <p id="taskCount">
+                        0 / 0 Tasks Completed
+                    </p>
+                </div>
+
+                <div class="percentage" id="percentage">
+                    0%
+                </div>
+
+            </div>
+
+
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+
+                <div
+                    class="progress"
+                    id="progress">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+        <section class="add-task">
+
+            <h2>Add New Task</h2>
+
+            <div class="task-input">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to do?"
+                >
+
+                <input
+                    type="time"
+                    id="taskTime"
+                >
+
+                <button id="addTaskBtn">
+                    + Add Task
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Today's Tasks -->
+        <section class="tasks-section">
+
+            <div class="section-title">
+
+                <h2>Today's Tasks</h2>
+
+                <span id="remainingTasks">
+                    0 remaining
+                </span>
+
+            </div>
+
+
+            <!-- Tasks will appear here -->
+            <div
+                class="tasks-container"
+                id="tasksContainer">
+
+                <!-- JavaScript will add tasks here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Streak -->
+        <section class="streak-card">
+
+            <div class="streak-icon">
+                🔥
+            </div>
+
+            <div>
+
+                <h2>0 Day Streak</h2>
+
+                <p>
+                    Complete your tasks every day!
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
