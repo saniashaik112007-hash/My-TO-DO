@@ -56,7 +56,7 @@ const remainingTasks =
 // TASK ARRAY
 // =========================
 
-let tasks = [];
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 
 // =========================
@@ -101,6 +101,9 @@ function addTask() {
     // Add task to array
 
     tasks.push(newTask);
+
+    // Save tasks to LocalStorage
+     localStorage.setItem("tasks", JSON.stringify(tasks));
 
 
     // Clear inputs
@@ -252,6 +255,9 @@ function toggleTask(id) {
     });
 
 
+    // Save tasks to LocalStorage
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
     displayTasks();
 
     updateProgress();
@@ -269,6 +275,8 @@ function deleteTask(id) {
         return task.id !== id;
 
     });
+// Save updated tasks
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 
 
     displayTasks();
@@ -377,3 +385,9 @@ function formatTime(time) {
         }
     );
 }
+// =========================
+// LOAD SAVED TASKS
+// =========================
+
+displayTasks();
+updateProgress();
