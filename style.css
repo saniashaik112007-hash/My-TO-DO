@@ -1,7 +1,12 @@
-/* =========================
-   STAGE 1 - BASIC UI
+/* =========================================
+   STAGE 2.5 - MODERN STYLING
    My Daily To-Do
-========================= */
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
 
 * {
     margin: 0;
@@ -9,20 +14,27 @@
     box-sizing: border-box;
 }
 
+
+/* =========================================
+   BODY
+========================================= */
+
 body {
     font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #222;
+    background: #f4f3ff;
+    color: #202033;
+    min-height: 100vh;
 }
 
 
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 .header {
     height: 70px;
-    background: white;
+
+    background: #ffffff;
 
     display: flex;
     align-items: center;
@@ -30,76 +42,117 @@ body {
 
     padding: 0 8%;
 
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e8e6f5;
+
+    box-shadow: 0 2px 10px rgba(76, 61, 150, 0.05);
 }
+
+
+/* Logo */
 
 .logo {
     font-size: 22px;
     font-weight: bold;
+
+    color: #29234a;
+
+    display: flex;
+    align-items: center;
 }
 
+
+/* Logo check */
+
 .logo span {
-    background: #4f46e5;
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #8b5cf6
+    );
+
     color: white;
 
     padding: 8px 10px;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
-    margin-right: 8px;
+    margin-right: 9px;
+
+    box-shadow: 0 5px 12px rgba(108, 99, 255, 0.25);
 }
+
+
+/* Date */
 
 .date {
-    color: #666;
+    color: #77738d;
+
     font-size: 14px;
+
+    font-weight: 500;
 }
 
 
-/* =========================
+/* =========================================
    MAIN CONTAINER
-========================= */
+========================================= */
 
 .container {
     width: 90%;
+
     max-width: 1000px;
 
     margin: 40px auto;
 }
 
 
-/* =========================
+/* =========================================
    WELCOME
-========================= */
+========================================= */
 
 .welcome {
     margin-bottom: 30px;
 }
 
+
 .welcome h1 {
     font-size: 32px;
+
     margin-bottom: 8px;
+
+    color: #282342;
 }
+
 
 .welcome p {
-    color: #777;
+    color: #77738d;
+
+    font-size: 15px;
 }
 
 
-/* =========================
+/* =========================================
    PROGRESS CARD
-========================= */
+========================================= */
 
 .progress-card {
-    background: white;
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f8f7ff
+    );
 
     padding: 25px;
 
-    border-radius: 15px;
+    border-radius: 18px;
 
     margin-bottom: 25px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ebe9f8;
+
+    box-shadow: 0 8px 25px rgba(73, 58, 140, 0.08);
 }
+
 
 .progress-info {
     display: flex;
@@ -111,70 +164,95 @@ body {
     margin-bottom: 20px;
 }
 
+
 .progress-info h2 {
     font-size: 20px;
+
+    color: #29234a;
 }
+
 
 .progress-info p {
-    color: #777;
+    color: #77738d;
 
-    margin-top: 5px;
+    margin-top: 6px;
+
+    font-size: 14px;
 }
+
+
+/* Percentage */
 
 .percentage {
     font-size: 30px;
+
     font-weight: bold;
 
-    color: #4f46e5;
+    color: #6c63ff;
 }
 
 
-/* Progress bar */
+/* =========================================
+   PROGRESS BAR
+========================================= */
 
 .progress-bar {
     width: 100%;
 
-    height: 10px;
+    height: 11px;
 
-    background: #e9e9ef;
+    background: #e9e7f5;
 
-    border-radius: 10px;
+    border-radius: 20px;
 
     overflow: hidden;
 }
+
 
 .progress {
     width: 0%;
 
     height: 100%;
 
-    background: #4f46e5;
+    background: linear-gradient(
+        90deg,
+        #6c63ff,
+        #8b5cf6
+    );
 
-    border-radius: 10px;
+    border-radius: 20px;
 
-    transition: 0.3s;
+    transition: width 0.4s ease;
 }
 
 
-/* =========================
+/* =========================================
    ADD TASK
-========================= */
+========================================= */
 
 .add-task {
-    background: white;
+    background: #ffffff;
 
     padding: 25px;
 
-    border-radius: 15px;
+    border-radius: 18px;
 
     margin-bottom: 25px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ebe9f8;
+
+    box-shadow: 0 8px 25px rgba(73, 58, 140, 0.07);
 }
+
 
 .add-task h2 {
     margin-bottom: 20px;
+
+    color: #29234a;
+
+    font-size: 20px;
 }
+
 
 .task-input {
     display: flex;
@@ -182,62 +260,99 @@ body {
     gap: 10px;
 }
 
+
+/* Inputs */
+
 .task-input input {
-    padding: 12px;
+    padding: 13px;
 
-    border: 1px solid #ddd;
+    border: 1px solid #ddd9ef;
 
-    border-radius: 8px;
+    background: #faf9ff;
+
+    border-radius: 10px;
 
     outline: none;
 
     font-size: 14px;
+
+    color: #29234a;
+
+    transition: 0.2s;
 }
+
 
 #taskInput {
     flex: 1;
 }
 
+
 .task-input input:focus {
-    border-color: #4f46e5;
+    border-color: #6c63ff;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.10);
 }
 
+
+/* Add button */
+
 .task-input button {
-    background: #4f46e5;
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #8b5cf6
+    );
 
     color: white;
 
     border: none;
 
-    padding: 12px 18px;
+    padding: 12px 20px;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     cursor: pointer;
 
     font-weight: bold;
+
+    transition: 0.2s;
+
+    box-shadow: 0 6px 15px rgba(108, 99, 255, 0.22);
 }
+
 
 .task-input button:hover {
-    background: #3730a3;
+    transform: translateY(-2px);
+
+    box-shadow: 0 9px 20px rgba(108, 99, 255, 0.30);
 }
 
 
-/* =========================
+.task-input button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
    TASK SECTION
-========================= */
+========================================= */
 
 .tasks-section {
-    background: white;
+    background: #ffffff;
 
     padding: 25px;
 
-    border-radius: 15px;
+    border-radius: 18px;
 
     margin-bottom: 25px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ebe9f8;
+
+    box-shadow: 0 8px 25px rgba(73, 58, 140, 0.07);
 }
+
 
 .section-title {
     display: flex;
@@ -249,96 +364,54 @@ body {
     margin-bottom: 20px;
 }
 
+
+.section-title h2 {
+    color: #29234a;
+
+    font-size: 20px;
+}
+
+
 .section-title span {
-    color: #777;
+    color: #6c63ff;
 
     font-size: 14px;
+
+    font-weight: 600;
 }
 
 
-/* =========================
-   STREAK
-========================= */
-
-.streak-card {
-    background: white;
-
-    padding: 25px;
-
-    border-radius: 15px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-}
-
-.streak-icon {
-    font-size: 35px;
-}
-
-.streak-card p {
-    color: #777;
-
-    margin-top: 5px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-
-    .header {
-        padding: 0 5%;
-    }
-
-    .date {
-        display: none;
-    }
-
-    .container {
-        width: 92%;
-    }
-
-    .welcome h1 {
-        font-size: 25px;
-    }
-
-    .task-input {
-        flex-direction: column;
-    }
-
-    .task-input input,
-    .task-input button {
-        width: 100%;
-    }
-}
-/* =========================
-   STAGE 2 - TASK CARDS
-========================= */
+/* =========================================
+   TASK CARD
+========================================= */
 
 .task-card {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    padding: 15px;
+    padding: 16px;
 
-    border: 1px solid #eeeeee;
-    border-radius: 10px;
+    border: 1px solid #eeeaf8;
+
+    background: #faf9ff;
+
+    border-radius: 12px;
 
     margin-bottom: 10px;
 
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
+
 .task-card:hover {
-    background: #f9f9ff;
+    background: #f5f3ff;
+
+    border-color: #ddd8ff;
+
+    transform: translateY(-1px);
 }
 
 
@@ -346,7 +419,9 @@ body {
 
 .task-left {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 }
 
@@ -355,9 +430,12 @@ body {
 
 .task-checkbox {
     width: 20px;
+
     height: 20px;
 
     cursor: pointer;
+
+    accent-color: #6c63ff;
 }
 
 
@@ -365,47 +443,190 @@ body {
 
 .task-details {
     display: flex;
+
     flex-direction: column;
+
     gap: 4px;
 }
 
+
 .task-title {
     font-size: 16px;
+
     font-weight: 600;
+
+    color: #29234a;
 }
+
 
 .task-time {
     font-size: 13px;
-    color: #777;
+
+    color: #88849b;
 }
 
 
-/* Completed task */
+/* =========================================
+   COMPLETED TASK
+========================================= */
+
+.task-card.completed {
+    background: #f2faf6;
+
+    border-color: #dcefe4;
+}
+
 
 .task-card.completed .task-title {
     text-decoration: line-through;
-    color: #999;
-}
 
-.task-card.completed {
-    background: #f7f7f7;
+    color: #929a95;
 }
 
 
-/* Delete button */
+.task-card.completed .task-time {
+    color: #9ca8a1;
+}
+
+
+/* =========================================
+   DELETE BUTTON
+========================================= */
 
 .delete-btn {
     border: none;
 
-    background: transparent;
+    background: #fff0f1;
 
-    font-size: 18px;
+    color: #e45b66;
+
+    font-size: 17px;
 
     cursor: pointer;
 
-    padding: 5px;
+    padding: 7px 9px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
 }
 
+
 .delete-btn:hover {
-    transform: scale(1.1);
+    background: #ffe0e3;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   STREAK
+========================================= */
+
+.streak-card {
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #fff9f0
+    );
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border: 1px solid #f2e8d8;
+
+    box-shadow: 0 8px 25px rgba(140, 100, 50, 0.07);
+}
+
+
+.streak-icon {
+    font-size: 38px;
+
+    background: #fff2dc;
+
+    padding: 10px;
+
+    border-radius: 12px;
+}
+
+
+.streak-card h2 {
+    color: #3b3024;
+}
+
+
+.streak-card p {
+    color: #888076;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+
+    .logo {
+        font-size: 18px;
+    }
+
+
+    .date {
+        display: none;
+    }
+
+
+    .container {
+        width: 92%;
+
+        margin: 25px auto;
+    }
+
+
+    .welcome h1 {
+        font-size: 25px;
+    }
+
+
+    .progress-card,
+    .add-task,
+    .tasks-section,
+    .streak-card {
+        padding: 20px;
+    }
+
+
+    .task-input {
+        flex-direction: column;
+    }
+
+
+    .task-input input,
+    .task-input button {
+        width: 100%;
+    }
+
+
+    .task-card {
+        padding: 13px;
+    }
+
+
+    .task-title {
+        font-size: 15px;
+    }
 }
